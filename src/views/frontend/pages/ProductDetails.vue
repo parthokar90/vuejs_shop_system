@@ -1,6 +1,6 @@
 <template>
     <!-- start banner area -->
-    <section class="inner-page banner" data-img="assets/images/banner.jpg">
+    <section class="inner-page banner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -25,30 +25,7 @@
                     <div class="image-area">
                         <div class="img-gallery">
                             <div class="item">
-                                <img id="zoom_01" src="assets/images/shop/shop1.jpg" alt="Product" data-zoom-image="assets/images/shop/shop1.jpg">
-                            </div>
-                            <div class="item">
-                                <img id="zoom_02" src="assets/images/shop/shop2.jpg" alt="Product" data-zoom-image="assets/images/shop/shop2.jpg">
-                            </div>
-                            <div class="item">
-                                <img id="zoom_03" src="assets/images/shop/shop3.jpg" alt="Product" data-zoom-image="assets/images/shop/shop3.jpg">
-                            </div>
-                            <div class="item">
-                                <img id="zoom_04" src="assets/images/shop/shop4.jpg" alt="Product" data-zoom-image="assets/images/shop/shop4.jpg">
-                            </div>
-                        </div>
-                        <div class="img-thumb">
-                            <div class="item">
-                                <img src="assets/images/shop/shop-sm1.jpg" alt="Product">
-                            </div>
-                            <div class="item">
-                                <img src="assets/images/shop/shop-sm2.jpg" alt="Product">
-                            </div>
-                            <div class="item">
-                                <img src="assets/images/shop/shop-sm3.jpg" alt="Product">
-                            </div>
-                            <div class="item">
-                                <img src="assets/images/shop/shop-sm4.jpg" alt="Product">
+                                <img src="frontend/assets/images/shop/shop1.jpg" alt="Product">
                             </div>
                         </div>
                     </div>
@@ -102,8 +79,6 @@
                                     </div>
                                 </div>
                                 <a href="#!" class="cart button-style1">add to cart <span class="btn-dot"></span></a>
-                                <a href="#!" class="add-more"><i class="far fa-heart"></i></a>
-                                <a href="#!" class="add-more"><i class="fas fa-sync-alt"></i></a>
                             </div>
                         </div>
                         <h5>category : <a href="#!">fashion,</a> <a href="#!">trend</a></h5>
@@ -133,16 +108,13 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">description</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">review <span>(2)</span></button>
-                        </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget semsa auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi quam, lacinia eu aliquam ac, aliquam in nisl.</p>
                             <div class="product-detail d-flex align-items-center">
                                 <div class="image">
-                                    <img src="assets/images/shop/description.jpg" alt="Product"/>
+                                    <img src="frontend/assets/images/shop/description.jpg" alt="Product"/>
                                 </div>
                                 <div class="description">
                                     <ul>
@@ -157,94 +129,7 @@
                             </div>
                             <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget semsa auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi quam, lacinia eu aliquam ac, aliquam in nisl.</p>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <ul class="comment">
-                                        <li class="item d-flex">
-                                            <div class="image">
-                                                <a href="#!">
-                                                    <img src="assets/images/shop/review1.jpg" alt="Review Image">
-                                                </a>
-                                            </div>
-                                            <div class="media-body">
-                                                <ul class="rating d-flex">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                                <a href="#!"><h5>Kenneth R. Myers</h5></a>
-                                                <a href="#!"><p>August 11, 2021</p></a>
-                                                <p>I am 6 feet tall and 220 lbs. This shirt fit me perfectly in the che shoulders. Myt only complaint is that it is so long! I like to wear polo shirts untucked This shirt goes completely past my rear end If I wore it with ordy shorts you probably wouldnt be able to see the shorts at all – completelythe shirt. It needs to be 4 inches shorter in terms of length to suitable
-                                                    woretheit with ordinary shorts, you probably</p>
-                                            </div>
-                                        </li>
-                                        <li class="item d-flex">
-                                            <div class="image">
-                                                <a href="#!">
-                                                    <img src="assets/images/shop/review2.jpg" alt="Review Image">
-                                                </a>
-                                            </div>
-                                            <div class="media-body">
-                                                <ul class="rating d-flex">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                                <a href="#!"><h5>Mike Addington</h5></a>
-                                                <a href="#!"><p>August 11, 2021</p></a>
-                                                <p>I am 6 feet tall and 220 lbs. This shirt fit me perfectly in the che shoulders. Myt only complaint is that it is so long! I like to wear polo shirts untucked This shirt goes completely past my rear end If I wore it with ordy shorts you probably wouldnt be able to see . </p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="add-review">
-                                        <h5>Add A Review</h5>
-                                        <p>Your email address will not be published</p>
-                                        <!-- Rating Stars Box -->
-                                        <div class="rating-stars d-flex">
-                                            <p>give your rating</p>
-                                            <ul id="stars">
-                                                <li class='star' title='Poor' data-value='1'>
-                                                    <i class='fas fa-star fa-fw'></i>
-                                                </li>
-                                                <li class='star' title='Fair' data-value='2'>
-                                                    <i class='fas fa-star fa-fw'></i>
-                                                </li>
-                                                <li class='star' title='Good' data-value='3'>
-                                                    <i class='fas fa-star fa-fw'></i>
-                                                </li>
-                                                <li class='star' title='Excellent' data-value='4'>
-                                                    <i class='fas fa-star fa-fw'></i>
-                                                </li>
-                                                <li class='star' title='WOW!!!' data-value='5'>
-                                                    <i class='fas fa-star fa-fw'></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <form action="#">
-                                            <textarea placeholder="your review*" class="inputs" required></textarea>
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <input type="text" placeholder="your name*" class="inputs" required>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <input type="email" placeholder="your email*" class="inputs" required>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <button type="submit" class="button-style1">submit <span class="btn-dot"></span></button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  
                     </div>
                 </div>
             </div>
@@ -266,8 +151,8 @@
                         <div class="col-lg-3">
                             <div class="single-product">
                                 <div class="image-area">
-                                    <img src="assets/images/home1/featured/p1a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="assets/images/home1/featured/p1b.jpg" class="img-hover" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p1a.jpg" class="img-main" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p1b.jpg" class="img-hover" alt="Product Image"/>
                                     <span class="sale-status">sale</span>
                                     <div class="action">
                                         <ul class="d-flex">
@@ -310,8 +195,8 @@
                         <div class="col-lg-3">
                             <div class="single-product">
                                 <div class="image-area">
-                                    <img src="assets/images/home1/featured/p2a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="assets/images/home1/featured/p2b.jpg" class="img-hover" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p2a.jpg" class="img-main" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p2b.jpg" class="img-hover" alt="Product Image"/>
                                     <span class="sale-status">sale</span>
                                     <div class="action">
                                         <ul class="d-flex">
@@ -355,8 +240,8 @@
                         <div class="col-lg-3">
                             <div class="single-product">
                                 <div class="image-area">
-                                    <img src="assets/images/home1/featured/p3a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="assets/images/home1/featured/p3b.jpg" class="img-hover" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p3a.jpg" class="img-main" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p3b.jpg" class="img-hover" alt="Product Image"/>
                                     <span class="sale-status">new</span>
                                     <div class="action">
                                         <ul class="d-flex">
@@ -400,8 +285,8 @@
                         <div class="col-lg-3">
                             <div class="single-product">
                                 <div class="image-area">
-                                    <img src="assets/images/home1/featured/p4a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="assets/images/home1/featured/p4b.jpg" class="img-hover" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p4a.jpg" class="img-main" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p4b.jpg" class="img-hover" alt="Product Image"/>
                                     <span class="sale-status">sale</span>
                                     <div class="action">
                                         <ul class="d-flex">
@@ -445,8 +330,8 @@
                         <div class="col-lg-3">
                             <div class="single-product">
                                 <div class="image-area">
-                                    <img src="assets/images/home1/featured/p3a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="assets/images/home1/featured/p3b.jpg" class="img-hover" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p3a.jpg" class="img-main" alt="Product Image"/>
+                                    <img src="frontend/assets/images/home1/featured/p3b.jpg" class="img-hover" alt="Product Image"/>
                                     <span class="sale-status">new</span>
                                     <div class="action">
                                         <ul class="d-flex">

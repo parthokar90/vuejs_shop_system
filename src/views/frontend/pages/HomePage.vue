@@ -1,5 +1,4 @@
 <script setup>
- import Fancybox from '../../../components/frontend/home/FancyBox.vue'
  import SpecialProduct from '../../../components/frontend/home/SpecialProduct.vue'
  import Offer from '../../../components/frontend/home/Offer.vue'
  import BestDeal from '../../../components/frontend/home/BestDeal.vue'
@@ -7,10 +6,6 @@
 </script>
 
 <template>
-   <!-- start fancybox area -->
-       <Fancybox></Fancybox>
-   <!-- end fancybox area -->
-
    <!-- start special area -->
       <SpecialProduct></SpecialProduct>
     <!-- end special area -->

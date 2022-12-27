@@ -33,9 +33,9 @@
                                     <img src="frontend/assets/images//home3/blog/blog3.jpg" alt="Blog Image"/>
                                 </div>
                                 <div class="content">
-                                    <a href="#!">
+                                     <RouterLink to="/p">
                                         <p>November 27, 2021</p>
-                                    </a>
+                                    </RouterLink>
                                     <a href="blog-detail-left.html">
                                         <h5>A Novel Idea: This Summer’s Best Sun Hats Are Supersized</h5>
                                     </a>

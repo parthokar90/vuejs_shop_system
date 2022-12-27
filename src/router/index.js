@@ -6,6 +6,7 @@ import ContactView from '../views/frontend/pages/Contact.vue'
 import CartView from '../views/frontend/pages/Cart.vue'
 import CheckoutView from '../views/frontend/pages/Checkout.vue'
 import AccountView from '../views/frontend/pages/Account.vue'
+import ProductDetails from '../views/frontend/pages/ProductDetails.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/account',
       name: 'account',
       component: AccountView
+    },
+    {
+      path: '/p',
+      name: 'p',
+      component: ProductDetails
     },
   ]
 })
