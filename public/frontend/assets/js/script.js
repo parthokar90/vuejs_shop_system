@@ -1,44 +1,4 @@
-/*=================================================================
-
-Template name: Martfy Multipurpose eCommerce HTML Template
-Version: 1.0.0
-Author: SITLBD 
-Author url: https://www.sitlbd.com/
-Developer: Najmul Huda Eimon   
-
-
-[Table of Content]
-
-01: Preloader
-02: Scroll to top button
-03: Background image
-04: Sticky menubar
-05: fancybox
-06: Select style
-07: mobile Menu
-08: home1 home3 banner slider
-09: mega menu advertise slider
-10: category button
-11: home1 featured slider
-12: home1 client slider part
-13: home2 top-seller slider
-14: home2 client slider part
-15: home3 category slider
-16: parallax activation home 1
-17: countdown
-18: Venobox video play
-19: aos scroll animation
-20: shop page range slider
-21: input spinner
-22: star rating
-23: shop page product slider and zoom
-24: blog page image slider and zoom
-25: packery blog masonry
-26: contact page Google Map
- 
-====================================================================*/
-
-  $(function(){
+ $(function(){
     "use strict";
 
     /*================================================================
