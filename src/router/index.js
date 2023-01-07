@@ -7,6 +7,9 @@ import CartView from '../views/frontend/pages/Cart.vue'
 import CheckoutView from '../views/frontend/pages/Checkout.vue'
 import AccountView from '../views/frontend/pages/Account.vue'
 import ProductDetails from '../views/frontend/pages/ProductDetails.vue'
+import CategoryProduct from '../views/frontend/pages/CategoryProduct.vue'
+import BlogDetails from '../views/frontend/pages/BlogDetails.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,12 +47,22 @@ const router = createRouter({
     {
       path: '/account',
       name: 'account',
-      component: AccountView
+      component: AccountView,
     },
     {
-      path: '/p',
-      name: 'p',
+      path: '/product-details/:id',
+      name: 'product-details',
       component: ProductDetails
+    },
+    {
+      path: '/category-product/:id',
+      name: 'category-product',
+      component: CategoryProduct,
+    },
+    {
+      path: '/blog-details/:id',
+      name: 'blog-details',
+      component: BlogDetails
     },
   ]
 })

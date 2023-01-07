@@ -1,23 +1,4 @@
 <template>
-    <!-- start banner area -->
-    <section class="inner-page banner" data-img="frontend/assets/images//banner.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>cart page</h2>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                          <li class="breadcrumb-item"><a href="shop-detail.html">shop</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">cart</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end banner area -->
-
     <!-- start account area -->
     <section class="cart-page cart-detail">
         <div class="container">

@@ -12,67 +12,17 @@
                         <!-- brand corner -->
                         <div class="col-lg-1-5">
                             <div class="corner">
-                                <h4>brand corner</h4>
+                                <h4>Category corner</h4>
                                 <ul>
-                                    <li>
+                                    <li v-for="(item, index) in categorys">
                                         <div class="media d-flex align-items-center">
-                                            <a href="category.html">
-                                                <img src="frontend/assets/images//home3/special/pro6.jpg" alt="Product">
-                                            </a>
+                                             <router-link :to="{ path: '/category-product/' + item.id }">
+                                                 <img v-bind:src="item.image" alt="Product">
+                                            </router-link>
                                             <div class="media-body">
-                                                <a href="category.html">
-                                                    <h5>apple iPhone</h5>
-                                                </a>
-                                                <p><span>$115</span> - $99</p>
-                                                <ul class="rating d-flex">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                       <li>
-                                        <div class="media d-flex align-items-center">
-                                            <a href="category.html">
-                                                <img src="frontend/assets/images//home3/special/pro6.jpg" alt="Product">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="category.html">
-                                                    <h5>apple iPhone</h5>
-                                                </a>
-                                                <p><span>$115</span> - $99</p>
-                                                <ul class="rating d-flex">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                       <li>
-                                        <div class="media d-flex align-items-center">
-                                            <a href="category.html">
-                                                <img src="frontend/assets/images//home3/special/pro6.jpg" alt="Product">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="category.html">
-                                                    <h5>apple iPhone</h5>
-                                                </a>
-                                                <p><span>$115</span> - $99</p>
-                                                <ul class="rating d-flex">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
+                                                 <router-link :to="{ path: '/category-product/' + item.id }">
+                                                    <h5>{{item.category_name}}</h5>
+                                                </router-link>
                                             </div>
                                         </div>
                                     </li>
@@ -82,22 +32,24 @@
                         <!-- products -->
                         <div class="col-lg-4-5 all">
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div v-for="(item, index) in products" class="col-lg-3 col-md-4 col-sm-6">
                                     <div class="single-item">
                                         <div class="image-area">
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8c.jpg" class="img-main" alt="Product"/>
-                                            </a>
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8a.jpg" class="img-hover" alt="Product"/>
-                                            </a>
-                                            <span class="sale-status">new</span>
+                                           <router-link :to="{ path: '/product-details/' + item.id }">
+                                                <img v-bind:src="item.image" class="img-main" alt="Product"/>
+                                           </router-link>
+
+                                            <router-link :to="{ path: '/product-details/' + item.id }">
+                                                <img v-bind:src="item.image" class="img-hover" alt="Product"/>
+                                            </router-link>
                                         </div>
                                         <div class="bottom-area">
                                             <a href="shop-detail-left.html">
-                                                <h5>gaming CPU</h5>
+                                                <h5>{{item.product_name}}</h5>
                                             </a>
-                                            <p><span>$110</span> - $78</p>
+                                            <p>
+                                               <span v-if="item.regular_price>0">Tk {{item.regular_price}} - </span>  Tk {{item.sale_price}}
+                                            </p>
                                             <div class="action">
                                                 <ul class="d-flex">
                                                     <li>
@@ -107,149 +59,16 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        <router-link :to="{ path: '/product-details/' + item.id }">
                                                             <i class="far fa-eye"></i>
                                                             <p class="my-tooltip">quick view</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="cart.html">
-                                                            <i class="flaticon-shopping-cart"></i>
-                                                            <p class="my-tooltip">add to cart</p>
-                                                        </a>
+                                                        </router-link>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                  <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="single-item">
-                                        <div class="image-area">
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8c.jpg" class="img-main" alt="Product"/>
-                                            </a>
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8a.jpg" class="img-hover" alt="Product"/>
-                                            </a>
-                                            <span class="sale-status">new</span>
-                                        </div>
-                                        <div class="bottom-area">
-                                            <a href="shop-detail-left.html">
-                                                <h5>gaming CPU</h5>
-                                            </a>
-                                            <p><span>$110</span> - $78</p>
-                                            <div class="action">
-                                                <ul class="d-flex">
-                                                    <li>
-                                                        <a href="wishlist.html">
-                                                            <i class="far fa-heart"></i>
-                                                            <p class="my-tooltip">add to wishlist</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                            <i class="far fa-eye"></i>
-                                                            <p class="my-tooltip">quick view</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="cart.html">
-                                                            <i class="flaticon-shopping-cart"></i>
-                                                            <p class="my-tooltip">add to cart</p>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                  <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="single-item">
-                                        <div class="image-area">
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8c.jpg" class="img-main" alt="Product"/>
-                                            </a>
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8a.jpg" class="img-hover" alt="Product"/>
-                                            </a>
-                                            <span class="sale-status">new</span>
-                                        </div>
-                                        <div class="bottom-area">
-                                            <a href="shop-detail-left.html">
-                                                <h5>gaming CPU</h5>
-                                            </a>
-                                            <p><span>$110</span> - $78</p>
-                                            <div class="action">
-                                                <ul class="d-flex">
-                                                    <li>
-                                                        <a href="wishlist.html">
-                                                            <i class="far fa-heart"></i>
-                                                            <p class="my-tooltip">add to wishlist</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                            <i class="far fa-eye"></i>
-                                                            <p class="my-tooltip">quick view</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="cart.html">
-                                                            <i class="flaticon-shopping-cart"></i>
-                                                            <p class="my-tooltip">add to cart</p>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                 <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <div class="single-item">
-                                        <div class="image-area">
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8c.jpg" class="img-main" alt="Product"/>
-                                            </a>
-                                            <a href="shop-detail-left.html">
-                                                <img src="frontend/assets/images//home3/featured/p8a.jpg" class="img-hover" alt="Product"/>
-                                            </a>
-                                            <span class="sale-status">new</span>
-                                        </div>
-                                        <div class="bottom-area">
-                                            <a href="shop-detail-left.html">
-                                                <h5>gaming CPU</h5>
-                                            </a>
-                                            <p><span>$110</span> - $78</p>
-                                            <div class="action">
-                                                <ul class="d-flex">
-                                                    <li>
-                                                        <a href="wishlist.html">
-                                                            <i class="far fa-heart"></i>
-                                                            <p class="my-tooltip">add to wishlist</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                            <i class="far fa-eye"></i>
-                                                            <p class="my-tooltip">quick view</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="cart.html">
-                                                            <i class="flaticon-shopping-cart"></i>
-                                                            <p class="my-tooltip">add to cart</p>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -258,3 +77,37 @@
         </div>
     </section>
 </template>
+
+<script>
+    import axios from 'axios'
+    export default {
+        data(){
+            return {
+                products:[],
+                categorys:[]
+            }
+        },
+        mounted(){
+            this.Product(),
+            this.category()
+        },
+        methods:{
+
+            Product(){
+                axios.get(`/product`).then(response=>{
+                    this.products = response.data.data
+                }).catch(error=>{
+                    this.products = []
+                })
+            },
+
+            category(){
+                axios.get(`/category/list`).then(response=>{
+                    this.categorys = response.data.data
+                }).catch(error=>{
+                    this.categorys = []
+                })
+            }
+        }
+    }
+</script>

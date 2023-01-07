@@ -9,15 +9,9 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="right-part d-flex justify-content-end">
-                            <div class="select-area">
-                                <select class="select">
-                                    <option value="0">English</option>
-                                </select>
-                            </div>
                             <div class="social-area">
                                 <ul class="d-flex">
                                     <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li>
                                     <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
                                     <li><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
                                 </ul>
@@ -46,10 +40,7 @@
                                 <div class="select-area">
                                     <select class="select">
                                         <option value="">all categories</option>
-                                        <option value="1">woman's</option>
-                                        <option value="2">men's</option>
-                                        <option value="3">kid's</option>
-                                        <option value="4">clothing</option>
+                                        <option v-for="(item, index) in categorys" :value=item.id>{{item.category_name}}</option>
                                     </select>
                                 </div>
                                 <input type="search" placeholder="search for products..." class="inputs">
@@ -160,7 +151,7 @@
                             </button>
                             <div class="menu-holder">
                                 <ul class="categories">
-                                    <li><a href="shop-4-column-sidebar.html"><i class="flaticon-checked"></i>gadgets</a></li>
+                                    <li v-for="(item, index) in categorys"><router-link :to="{ path: '/category-product/' + item.id }"><i class="flaticon-checked"></i>{{item.category_name}}</router-link></li>
                                 </ul>
                             </div>
                         </div>
@@ -181,7 +172,7 @@
                                 <i class="flaticon-customer-service"></i>
                                 <div class="text">
                                     <p>call now</p>
-                                    <p>988. 876 76 76 8</p>
+                                    <p>+8801765456090</p>
                                 </div>
                             </div>
                         </nav>
@@ -336,4 +327,27 @@
         <!-- end menu area -->
     </header>
 </template>
+
+<script>
+    import axios from 'axios'
+    export default {
+        data(){
+            return {
+                categorys:[]
+            }
+        },
+        mounted(){
+            this.category()
+        },
+        methods:{
+            category(){
+                axios.get(`/category/list`).then(response=>{
+                    this.categorys = response.data.data
+                }).catch(error=>{
+                    this.categorys = []
+                })
+            }
+        }
+    }
+</script>
 
