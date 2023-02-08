@@ -31,16 +31,6 @@
                                 <button @click="addToCart" class="cart button-style1">add to cart <span class="btn-dot"></span></button>
                             </div>
                         </div>
-                       
-                        <div class="share d-flex align-items-center">
-                            <h5>share : </h5>
-                            <ul class="d-flex">
-                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -80,220 +70,18 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="row featured-slider">
-                        <div class="col-lg-3">
+                        <div v-for="(item, index) in category_product" class="col-lg-3">
                             <div class="single-product">
                                 <div class="image-area">
-                                    <img src="frontend/assets/images/home1/featured/p1a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="frontend/assets/images/home1/featured/p1b.jpg" class="img-hover" alt="Product Image"/>
+                                    <img v-bind:src="item.image" class="img-main img-fluid" alt="Product Image"/>
+                                    <img v-bind:src="item.image" class="img-hover img-fluid" alt="Product Image"/>
                                     <span class="sale-status">sale</span>
-                                    <div class="action">
-                                        <ul class="d-flex">
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-heart"></i>
-                                                    <p class="my-tooltip">add to wishlist</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-eye"></i>
-                                                    <p class="my-tooltip">quick view</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="flaticon-shopping-cart-1"></i>
-                                                    <p class="my-tooltip">add to cart</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                                 <div class="bottom-area">
-                                    <a href="shop-detail.html">
-                                        <h5>Contrast Print T-Shirt</h5>
-                                    </a>
-                                    <p><span>$110</span> - $78</p>
-                                    <ul class="rating d-flex">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product">
-                                <div class="image-area">
-                                    <img src="frontend/assets/images/home1/featured/p2a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="frontend/assets/images/home1/featured/p2b.jpg" class="img-hover" alt="Product Image"/>
-                                    <span class="sale-status">sale</span>
-                                    <div class="action">
-                                        <ul class="d-flex">
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-heart"></i>
-                                                    <p class="my-tooltip">add to wishlist</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-eye"></i>
-                                                    <p class="my-tooltip">quick view</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="flaticon-shopping-cart-1"></i>
-                                                    <p class="my-tooltip">add to cart</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="bottom-area">
-                                    <a href="shop-detail.html">
-                                        <h5>Black Fit Polo Shirt</h5>
-                                    </a>
-                                    
-                                    <p><span>$110</span> - $78</p>
-                                    <ul class="rating d-flex">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product">
-                                <div class="image-area">
-                                    <img src="frontend/assets/images/home1/featured/p3a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="frontend/assets/images/home1/featured/p3b.jpg" class="img-hover" alt="Product Image"/>
-                                    <span class="sale-status">new</span>
-                                    <div class="action">
-                                        <ul class="d-flex">
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-heart"></i>
-                                                    <p class="my-tooltip">add to wishlist</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-eye"></i>
-                                                    <p class="my-tooltip">quick view</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="flaticon-shopping-cart-1"></i>
-                                                    <p class="my-tooltip">add to cart</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="bottom-area">
-                                    <a href="shop-detail.html">
-                                        <h5>T-shirt with Chest Pocket</h5>
-                                    </a>
-                                    
-                                    <p><span>$110</span> - $78</p>
-                                    <ul class="rating d-flex">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product">
-                                <div class="image-area">
-                                    <img src="frontend/assets/images/home1/featured/p4a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="frontend/assets/images/home1/featured/p4b.jpg" class="img-hover" alt="Product Image"/>
-                                    <span class="sale-status">sale</span>
-                                    <div class="action">
-                                        <ul class="d-flex">
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-heart"></i>
-                                                    <p class="my-tooltip">add to wishlist</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-eye"></i>
-                                                    <p class="my-tooltip">quick view</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="flaticon-shopping-cart-1"></i>
-                                                    <p class="my-tooltip">add to cart</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="bottom-area">
-                                    <a href="shop-detail.html">
-                                        <h5>Muscle Fit Polo Shirt</h5>
-                                    </a>
-                                    
-                                    <p><span>$110</span> - $78</p>
-                                    <ul class="rating d-flex">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single-product">
-                                <div class="image-area">
-                                    <img src="frontend/assets/images/home1/featured/p3a.jpg" class="img-main" alt="Product Image"/>
-                                    <img src="frontend/assets/images/home1/featured/p3b.jpg" class="img-hover" alt="Product Image"/>
-                                    <span class="sale-status">new</span>
-                                    <div class="action">
-                                        <ul class="d-flex">
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-heart"></i>
-                                                    <p class="my-tooltip">add to wishlist</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="far fa-eye"></i>
-                                                    <p class="my-tooltip">quick view</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#!">
-                                                    <i class="flaticon-shopping-cart-1"></i>
-                                                    <p class="my-tooltip">add to cart</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="bottom-area">
-                                    <a href="shop-detail.html">
-                                        <h5>T-shirt with Chest Pocket</h5>
-                                    </a>
-                                    
-                                    <p><span>$110</span> - $78</p>
+                                    <router-link :to="{ path: '/product-details/' + item.id }">
+                                          <h5>{{item.product_name}}</h5>
+                                    </router-link>
+                                    <p>{{item.sale_price}}</p>
                                     <ul class="rating d-flex">
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
@@ -321,16 +109,21 @@
                 product:'',
                 quantity:1,
                 product_id:this.$route.params.id,
+                category_product:[],
             }
         },
         mounted(){
             this.Product()
+            this.$nextTick(() => {
+              window.scrollTo(0, 0)
+            })
         },
         methods:{
 
             Product(){
                 axios.get('/product/'+this.$route.params.id).then(response=>{
                     this.product = response.data.data
+                    this.categoryProduct(response.data.data.category_id);
                 }).catch(error=>{
                     this.product = ''
                 })
@@ -343,19 +136,21 @@
             decrement(){
                if (this.quantity === 0) return
                this.quantity -= 1
-
                if(this.quantity==0) return this.quantity=1
             },
 
             addToCart(){
-               let token=localStorage.getItem("token");
-               if(token==null){
-                  this.$router.push('/account');
-               }   
                axios.post('/carts').then(response=>{
                     console.log(response);
                 }).catch(error=>{
                     this.product = ''
+                })
+            },
+
+            categoryProduct(id){
+                axios.get('category/product/'+id).then(response=>{
+                    this.category_product=response.data.data;
+                }).catch(error=>{
                 })
             }
         }

@@ -35,18 +35,22 @@
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-7 order-3 order-md-2">
-                        <form action="#!">
                             <div class="form">
-                                <div class="select-area">
-                                    <select class="select">
-                                        <option value="">all categories</option>
-                                        <option v-for="(item, index) in categorys" :value=item.id>{{item.category_name}}</option>
-                                    </select>
-                                </div>
-                                <input type="search" placeholder="search for products..." class="inputs">
+                                <input  v-model="input" name="input" type="search" placeholder="search for products..." class="inputs">
+                                  <button v-on:click="searchData" type="button" class="button-style1">search<span class="btn-dot"></span></button>
                             </div>
-                            <button type="submit" class="button-style1">search<span class="btn-dot"></span></button>
-                        </form>
+                        <ul v-if="showData==true" class="s-image">
+                            <li v-for="(item, index) in dataItem">
+                              <div class="d-flex position-relative">
+                                <img v-bind:src="item.image" alt="Product Image"/>
+                                   <div class="text">
+                                       <a href="shop-4-column-sidebar.html">
+                                            <h5>{{item.product_name}}</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>     
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6 order-2 order-md-3">
                         <div class="notification">
@@ -149,11 +153,6 @@
                                 
                                 <i class="fas fa-bars bar-icon"></i>
                             </button>
-                            <div class="menu-holder">
-                                <ul class="categories">
-                                    <li v-for="(item, index) in categorys"><router-link :to="{ path: '/category-product/' + item.id }"><i class="flaticon-checked"></i>{{item.category_name}}</router-link></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-7 col-sm-6 col-6">
@@ -181,131 +180,11 @@
                             <div class="header-menu position-static">
                                 <ul class="menu">
                                     <li class="active">
-                                        <a href="#!">home</a>
-                                     
+                                     <RouterLink to="/">home</RouterLink>
                                     </li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li>
-                                        <a href="#!">pages</a>
-                                        <ul>
-                                            <li><a href="about.html">about</a></li>
-                                            <li>
-                                                <a href="#!">account</a>
-                                                <ul>
-                                                    <li><a href="login.html">login</a></li>
-                                                    <li><a href="register.html">register</a></li>
-                                                    <li><a href="account.html">my account</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="faq.html">FAQ</a></li>
-                                            <li><a href="coming-soon.html">coming soon</a></li>
-                                            <li><a href="contact.html">contact</a></li>
-                                            <li>
-                                                <a href="#!">404 error</a>
-                                                <ul>
-                                                    <li><a href="404.html">404 style 1</a></li>
-                                                    <li><a href="404a.html">404 style 2</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#!">shop</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#!">collections</a>
-                                                <ul>
-                                                    <li><a href="shop-4-column-sidebar.html">spring summer collections</a></li>
-                                                    <li><a href="shop-3-column-sidebar.html">fall winter collections</a></li>
-                                                    <li><a href="shop-2-column-sidebar.html">Boishakhi collections</a></li>
-                                                    <li><a href="shop-4-column-sidebar.html">puja collections</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#!">shop with sidebar</a>
-                                                <ul>
-                                                    <li><a href="shop-2-column-sidebar.html">grid 2 columns</a></li>
-                                                    <li><a href="shop-3-column-sidebar.html">grid 3 columns</a></li>
-                                                    <li><a href="shop-4-column-sidebar.html">grid 4 columns</a></li>
-                                                    <li><a href="shop-list-left-sidebar.html">shop list left</a></li>
-                                                    <li><a href="shop-list-right-sidebar.html">shop list right</a></li>
-                                                    <li><a href="shop-right-sidebar.html">shop classic</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#!">shop without sidebar</a>
-                                                <ul>
-                                                    <li><a href="shop-2-column.html">grid 2 columns</a></li>
-                                                    <li><a href="shop-3-column.html">grid 3 columns</a></li>
-                                                    <li><a href="shop-4-column.html">grid 4 columns</a></li>
-                                                    <li><a href="shop-5-column.html">grid 5 columns</a></li>
-                                                    <li><a href="shop-full-width.html">shop full width</a></li>
-                                                    <li><a href="shop-list-left.html">shop list left</a></li>
-                                                    <li><a href="shop-list-right.html">shop list right</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#!">shop pages</a>
-                                                <ul>
-                                                    <li><a href="shop-detail-left.html">shop details left</a></li>
-                                                    <li><a href="shop-detail-right.html">shop details right</a></li>
-                                                    <li><a href="shop-detail-tab-left.html">shop details tab left</a></li>
-                                                    <li><a href="shop-detail-tab-right.html">shop details tab right</a></li>
-                                                    <li><a href="cart.html">cart</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="compare.html">compare</a></li>
-                                                    <li><a href="category.html">category</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="project.html">blog</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#!">classic</a>
-                                                <ul>
-                                                    <li><a href="blog-left-sidebar.html">left sidebar</a></li>
-                                                    <li><a href="blog-right-sidebar.html">right sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#!">grid</a>
-                                                <ul>
-                                                    <li><a href="blog-3-column.html">blog 3 columns</a></li>
-                                                    <li><a href="blog-4-column.html">blog 4 columns</a></li>
-                                                    <li><a href="blog-grid-left-sidebar.html">blog left sidebar</a></li>
-                                                    <li><a href="blog-grid-right-sidebar.html">blog right sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#!">list</a>
-                                                <ul>
-                                                    <li><a href="blog-list-left.html">blog left sidebar</a></li>
-                                                    <li><a href="blog-list-right.html">blog right sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#!">details</a>
-                                                <ul>
-                                                    <li><a href="blog-detail-left.html">details left sidebar</a></li>
-                                                    <li><a href="blog-detail-right.html">details right sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog-fullpage.html">full page</a></li>
-                                            <li><a href="blog-lifestyle.html">lifestyle</a></li>
-                                            <li>
-                                                <a href="#!">masonry</a>
-                                                <ul>
-                                                    <li><a href="blog-masonry-2-column.html">masonry 2 columns</a></li>
-                                                    <li><a href="blog-masonry-3-column.html">masonry 3 columns</a></li>
-                                                    <li><a href="blog-masonry-4-column.html">masonry 4 columns</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">contact</a></li>
+                                    <li><RouterLink to="/about">about us</RouterLink></li>
+                                    <li><RouterLink to="/blog">Blog</RouterLink></li>
+                                    <li><RouterLink to="/contact">contact us</RouterLink></li>
                                 </ul>
                             </div>
                         </nav>
@@ -333,20 +212,25 @@
     export default {
         data(){
             return {
-                categorys:[]
+                dataItem:[],
+                input:'',
+                isLoading: true,
+                showData: false,
             }
-        },
-        mounted(){
-            this.category()
         },
         methods:{
-            category(){
-                axios.get(`/category/list`).then(response=>{
-                    this.categorys = response.data.data
-                }).catch(error=>{
-                    this.categorys = []
-                })
-            }
+            searchData(){
+              axios.post(`search`, {
+                input: this.input,
+            })
+            .then(response => {
+               this.dataItem=response.data;
+               this.showData = true;
+             })
+            .catch(error => {
+              console.log(response);
+            });
+          },
         }
     }
 </script>

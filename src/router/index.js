@@ -9,6 +9,7 @@ import AccountView from '../views/frontend/pages/Account.vue'
 import ProductDetails from '../views/frontend/pages/ProductDetails.vue'
 import CategoryProduct from '../views/frontend/pages/CategoryProduct.vue'
 import BlogDetails from '../views/frontend/pages/BlogDetails.vue'
+import Search from '../views/frontend/pages/Search.vue'
 
 
 const router = createRouter({
@@ -64,8 +65,14 @@ const router = createRouter({
       name: 'blog-details',
       component: BlogDetails
     },
+    {
+      path: '/search',
+      name: 'search',
+      component: Search,
+    },
   ]
 })
+
 
 
 export default router

@@ -9,6 +9,11 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="row justify-content-center">
+                       <div v-if="isLoading==true" class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        </div>
                          <div v-for="(item, index) in blogs" class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-blog">
                                 <div class="blog-img item-animation3">
@@ -39,16 +44,20 @@
         data(){
             return {
                 blogs:[],
+                isLoading: true,
             }
+        },
+        beforeMount(){
+          this.isLoading=true;
         },
         mounted(){
             this.blog()
         },
         methods:{
-
             blog(){
                 axios.get(`/blog`).then(response=>{
                     this.blogs = response.data.data
+                    this.isLoading=false;
                 }).catch(error=>{
                     this.blogs = []
                 })

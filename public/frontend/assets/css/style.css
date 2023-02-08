@@ -9140,4 +9140,19 @@ footer {
   background: #ec7a5c;
 }
 
+.media img{
+  width:40%;
+}
+
+.image-area img{
+  height:330px;
+}
+
+.s-image{
+  height: 72px;
+  overflow: scroll;
+}
+.s-image img{
+ width: 6%;
+}
 /*# sourceMappingURL=style.css.map */

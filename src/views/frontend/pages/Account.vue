@@ -58,16 +58,15 @@
     registration(){
         axios.post('register', this.registerData)
           .then(response => {
-               alert(response);
+                if(response.data.message=='Validation errors'){
 
-
-                    if(response.data.data.name!=null){
-                        this.$toast.error(response.data.data.name,{
-                           position: "top-right",
+                   if(response.data.data.name!=null){
+                         this.$toast.error(response.data.data.name,{
+                         position: "top-right",
                         });
                      }
 
-                     if(response.data.data.email!=null){
+                   if(response.data.data.email!=null){
                          this.$toast.error(response.data.data.email,{
                          position: "top-right",
                         });
@@ -77,21 +76,18 @@
                         this.$toast.error(response.data.data.password,{
                         position: "top-right",
                         });
-                     }
-
-                  
-                     
-                       this.$toast.success(response.data.data.message,{
+                    }
+                }else{
+                     this.$toast.success(response.data.message,{
                         position: "top-right",
-                      });
-                     
-                    
-
-          })
-          .catch(error => {
-            console.log(error.response);
-          });
-    },
+                     });
+                }
+               
+             })
+            .catch(error => {
+              console.log(response);
+            });
+       },
 
     login() {
         axios.post(`login`, {

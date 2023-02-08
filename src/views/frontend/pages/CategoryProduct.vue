@@ -7,11 +7,16 @@
                     <div class="content">
                         <div class="home1 collection">
                             <div class="row">
+                                    <div v-if="isLoading==true" class="d-flex justify-content-center">
+                                        <div class="spinner-border" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
                                 <div v-for="(item, index) in products" class="col-lg-1-5 col-lg-3 col-md-4 col-sm-6">
                                     <div class="single-item">
                                         <div class="image-area">
                                             <router-link :to="{ path: '/product-details/' + item.id }">
-                                                <img v-bind:src="item.image" class="img-active" alt="Product Image"/>
+                                                <img v-bind:src="item.image" class="img-active img-fluid" alt="Product Image"/>
                                             </router-link>
                                              <router-link :to="{ path: '/product-details/' + item.id }">
                                                 <img v-bind:src="item.image" class="img-hover" alt="Product Image"/>
@@ -55,8 +60,6 @@
                                         </div>
                                     </div>
                                 </div>
-                             
-                           
                                 <div class="col-lg-12">
                                     <div class="pages">
                                         <ul class="d-flex justify-content-center">
@@ -85,6 +88,7 @@
         data(){
             return {
                 products:[],
+                isLoading: true,
             }
         },
         mounted(){
@@ -95,6 +99,7 @@
             Product(){
                 axios.get('/category/product/'+this.$route.params.id).then(response=>{
                     this.products = response.data.data
+                    this.isLoading=false;
                 }).catch(error=>{
                     this.products = []
                 })
