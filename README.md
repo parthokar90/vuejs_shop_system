@@ -1,35 +1,83 @@
-# vue-shop
+#  VueJS Product & Category Management (Frontend)
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a VueJS Single Page Application (SPA) that consumes a Laravel REST API to manage Products and Categories.
 
-## Recommended IDE Setup
+The application allows users to create, update, delete, and view products and categories dynamically using Axios for API communication.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+---
 
-## Customize configuration
+# Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Product Management
+- Create Product
+- Edit Product
+- Delete Product
+- View Product List
+- Assign Product to Category
 
-## Project Setup
+### Category Management
+- Create Category
+- Edit Category
+- Delete Category
+- View Category List
 
-```sh
+### API Integration
+- Axios for HTTP requests
+- RESTful API consumption
+- JSON-based communication
+- Proper error handling
+- Form validation
+
+---
+
+### Tech Stack
+
+- VueJS
+- Vue Router
+- Axios
+- Bootstrap / CSS
+- Vite (or Vue CLI)
+
+---
+
+### Project Structure
+
+
+- **components/** → Reusable UI components  
+- **views/** → Page-level components  
+- **router/** → Application routes  
+- **services/** → Axios API configuration  
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-vue-repo.git
+```
+
+2️⃣ Install Dependencies
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+3️⃣ Configure API Base URL
 
-```sh
+```bash
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "http://127.0.0.1:8000/api"
+});
+
+export default api;
+```
+
+4️⃣ Start Development Server
+```bash
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+http://localhost:5173
 ```
